@@ -1,0 +1,13 @@
+  <div class="row" style="box-shadow: 0 0 60px #919E00;">
+      <div class="col-6 col-sm-6 col-lg-10">
+      <% @posts.each do |post| %>
+        <h3><%= post.title %></h3>
+          <p><small><%= post.text %></small></p>
+          <td><%= link_to 'Show', post, class: "btn btn-default" %></td>
+          <td><%= link_to 'Edit', edit_post_path(post), class: "btn btn-default" %></td>
+          <td><%= link_to 'Destroy', post, method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-default" %></td>
+          <td><%= link_to 'New Post', new_post_path, class: "btn btn-default"%></td>
+           <span class="glyphicon glyphicon-star-empty "></span>
+        <% end %>
+      </div>
+
